@@ -2,7 +2,8 @@
 #define COneProWidget_H
 
 #include <QWidget>
-#include <QMoreWidget/CProjectInfoWidget.h>
+#include <CNatureTempletWidget//CProjectInfoWidget.h>
+#include <CNatureTempletWidget/CNaturePeakWidget.h>
 class COneProWidget : public QWidget
 {
     Q_OBJECT
@@ -15,6 +16,7 @@ public slots:
 
 private:
     CProjectInfoWidget *m_pProjectInfoWidget;
+    CNaturePeakWidget *m_pNaturePeakWidget;
 };
 
 #endif // COneProWidget_H

@@ -6,8 +6,8 @@
 #include <QTabWidget>
 #include <QLayout>
 #include <QLabel>
-#include "QMoreWidget/CProjectKindWidget.h"
-#include "CSingleProWidget.h"
+#include "CNatureTempletWidget//CProjectKindWidget.h"
+#include "OneProjectWidget/COneProWidget.h"
 namespace Ui {
 class MainWindow;
 }
@@ -37,11 +37,10 @@ private:
     CProjectKindWidget *m_pProjectKindWidget;
     // 选项卡
     QTabWidget *m_pProTableWidget;
-    CSingleProWidget *m_pOneProWidget;
+    COneProWidget *m_pOneProWidget;
     QLabel *m_pLabelTest2;
     QLabel *m_pLabelTest3;
     QLabel *m_pLabelTest4;
-
 };
 
 #endif // MAINWINDOW_H

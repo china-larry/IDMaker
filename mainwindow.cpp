@@ -64,7 +64,7 @@ void MainWindow::initWidget()
     connect(m_pProjectKindWidget, SIGNAL(SigSelectPro(int)), this, SLOT(SlotSelectProject(int)));
     // 选项卡
     m_pProTableWidget = new QTabWidget(this);
-    m_pOneProWidget = new CSingleProWidget(this);
+    m_pOneProWidget = new COneProWidget(this);
     m_pLabelTest2 = new QLabel("两个项目");
     m_pLabelTest3 = new QLabel("三个项目");
     m_pLabelTest4 = new QLabel("定性项目");
