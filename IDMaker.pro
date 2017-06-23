@@ -24,8 +24,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    CNatureTempletWidget/CProjectInfoWidget.cpp \
+    CNatureTempletWidget/CProjectKindWidget.cpp \
+    OneProjectWidget/COneProWidget.cpp \
+    CQualityTempletWidget/CQualityPeakWidget.cpp \
+    CNatureTempletWidget/CNaturePeakWidget.cpp \
+    MoreProjectWidget/CMoreProjectWidget.cpp \
+    NatureProjectWidget/CNatureProjectWidget.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    CNatureTempletWidget/CProjectInfoWidget.h \
+    CNatureTempletWidget/CProjectKindWidget.h \
+    OneProjectWidget/COneProWidget.h \
+    CQualityTempletWidget/CQualityPeakWidget.h \
+    CNatureTempletWidget/CNaturePeakWidget.h \
+    MoreProjectWidget/CMoreProjectWidget.h \
+    NatureProjectWidget/CNatureProjectWidget.h
 
 FORMS    += mainwindow.ui
