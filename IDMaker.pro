@@ -31,7 +31,8 @@ SOURCES += main.cpp\
     CQualityTempletWidget/CQualityPeakWidget.cpp \
     CNatureTempletWidget/CNaturePeakWidget.cpp \
     MoreProjectWidget/CMoreProjectWidget.cpp \
-    NatureProjectWidget/CNatureProjectWidget.cpp
+    NatureProjectWidget/CNatureProjectWidget.cpp \
+    CNatureTempletWidget/CBasisDataWidget.cpp
 
 HEADERS  += mainwindow.h \
     CNatureTempletWidget/CProjectInfoWidget.h \
@@ -40,6 +41,7 @@ HEADERS  += mainwindow.h \
     CQualityTempletWidget/CQualityPeakWidget.h \
     CNatureTempletWidget/CNaturePeakWidget.h \
     MoreProjectWidget/CMoreProjectWidget.h \
-    NatureProjectWidget/CNatureProjectWidget.h
+    NatureProjectWidget/CNatureProjectWidget.h \
+    CNatureTempletWidget/CBasisDataWidget.h
 
 FORMS    += mainwindow.ui
