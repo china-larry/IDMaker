@@ -13,6 +13,9 @@ void CNaturePeakWidget::initWidget()
     m_pT1PeakNameCBox = new QComboBox(this);
     m_pT2PeakNameCBox = new QComboBox(this);
     m_pCPeakNameCBox = new QComboBox(this);
+    m_pT1PeakNameCBox->setMinimumWidth(50);
+    m_pT2PeakNameCBox->setMinimumWidth(50);
+    m_pCPeakNameCBox->setMinimumWidth(50);
     QStringList qstrListTmp = {"T1", "T2", "C"};
     m_pT1PeakNameCBox->addItems(qstrListTmp);
     m_pT2PeakNameCBox->addItems(qstrListTmp);
@@ -52,31 +55,41 @@ void CNaturePeakWidget::initWidget()
 
 void CNaturePeakWidget::initLayout()
 {
-    QGridLayout *pGridLayout = new QGridLayout;
-    // 1行
-    pGridLayout->addWidget(m_pPeakNameLabel, 0, 0);
-    pGridLayout->addWidget(m_pStartLabel, 0, 1);
-    //pGridLayout->addWidget(m_pLineLabel, 0, 2);
-    pGridLayout->addWidget(m_pEndPosLabel, 0, 3);
-    pGridLayout->addWidget(m_pValueLabel, 0, 4);
-    // 2行
-    pGridLayout->addWidget(m_pT1PeakNameCBox, 1, 0);
-    pGridLayout->addWidget(m_pT1StartPosLineEdit, 1, 1);
-    pGridLayout->addWidget(m_pLineLabel01, 1, 2);
-    pGridLayout->addWidget(m_pT1EndPosLineEdit, 1, 3);
-    pGridLayout->addWidget(m_pT1ValueLineEdit, 1, 4);
-    // 3行
-    pGridLayout->addWidget(m_pT2PeakNameCBox, 2, 0);
-    pGridLayout->addWidget(m_pT2StartPosLineEdit, 2, 1);
-    pGridLayout->addWidget(m_pLineLabel02, 2, 2);
-    pGridLayout->addWidget(m_pT2EndPosLineEdit, 2, 3);
-    pGridLayout->addWidget(m_pT2ValueLineEdit, 2, 4);
-    // 4行
-    pGridLayout->addWidget(m_pCPeakNameCBox, 3, 0);
-    pGridLayout->addWidget(m_pCStartPosLineEdit, 3, 1);
-    pGridLayout->addWidget(m_pLineLabel03, 3, 2);
-    pGridLayout->addWidget(m_pCEndPosLineEdit, 3, 3);
-    pGridLayout->addWidget(m_pCValueLineEdit, 3, 4);
+    QVBoxLayout *pLayout = new QVBoxLayout;
     //
-    this->setLayout(pGridLayout);
+    QHBoxLayout *pLine1HLayout = new QHBoxLayout;
+    pLine1HLayout->addWidget(m_pPeakNameLabel);
+    pLine1HLayout->addWidget(m_pStartLabel);
+    pLine1HLayout->addSpacing(20);
+    pLine1HLayout->addWidget(m_pEndPosLabel);
+    pLine1HLayout->addWidget(m_pValueLabel);
+    QHBoxLayout *pLine2HLayout = new QHBoxLayout;
+    pLine2HLayout->addWidget(m_pT1PeakNameCBox);
+    pLine2HLayout->addWidget(m_pT1StartPosLineEdit);
+    pLine2HLayout->addWidget(m_pLineLabel01);
+    pLine2HLayout->addWidget(m_pT1EndPosLineEdit);
+    pLine2HLayout->addWidget(m_pT1ValueLineEdit);
+    QHBoxLayout *pLine3HLayout = new QHBoxLayout;
+    pLine3HLayout->addWidget(m_pT2PeakNameCBox);
+    pLine3HLayout->addWidget(m_pT2StartPosLineEdit);
+    pLine3HLayout->addWidget(m_pLineLabel02);
+    pLine3HLayout->addWidget(m_pT2EndPosLineEdit);
+    pLine3HLayout->addWidget(m_pT2ValueLineEdit);
+    QHBoxLayout *pLine4HLayout = new QHBoxLayout;
+    pLine4HLayout->addWidget(m_pCPeakNameCBox);
+    pLine4HLayout->addWidget(m_pCStartPosLineEdit);
+    pLine4HLayout->addWidget(m_pLineLabel03);
+    pLine4HLayout->addWidget(m_pCEndPosLineEdit);
+    pLine4HLayout->addWidget(m_pCValueLineEdit);
+    //
+    pLayout->addLayout(pLine1HLayout);
+    pLayout->addLayout(pLine2HLayout);
+    pLayout->addLayout(pLine3HLayout);
+    pLayout->addLayout(pLine4HLayout);
+    pLayout->addStretch(100);
+    //
+    this->setLayout(pLayout);
+
+//    //
+//    this->setLayout(pGridLayout);
 }

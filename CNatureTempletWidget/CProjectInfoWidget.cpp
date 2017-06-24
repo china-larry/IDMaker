@@ -12,74 +12,60 @@ CProjectInfoWidget::CProjectInfoWidget(QWidget *parent) : QWidget(parent)
 void CProjectInfoWidget::initWidget()
 {
     // 产品代码
-    m_pProCodeLabel = new QLabel("产品代码：", this);
-    m_pProCodeCBox = new QComboBox(this);
+    QStringList qstrlistProCode;
     for(int i = 0; i < 256; i++)
     {
-        m_pProCodeCBox->insertItem(i, QString::number(i));
+        qstrlistProCode.append(QString::number(i));
     }
+    m_pProCodeLCWidget = new CLabelComboxWidget("产品代码：", qstrlistProCode, this);
     // 年
-    m_pProYearLabel = new QLabel("年：", this);
-    m_pProYearCBox = new QComboBox(this);
+    QStringList qstrlistYear;
     for(int i = 0; i < 30; i++)
     {
-        m_pProYearCBox->insertItem(i, QString::number(i+2012));
+        qstrlistYear.append(QString::number(i+2010));
     }
+    m_pProYearLCWidget = new CLabelComboxWidget("年：", qstrlistYear, this);
     // 月
-    m_pProMonthLabel = new QLabel("月：", this);
-    m_pProMonthCBox = new QComboBox(this);
+    QStringList qstrlistMonth;
     for(int i = 1; i < 13; i++)
     {
-        m_pProMonthCBox->insertItem(i, QString::number(i));
+        qstrlistMonth.append(QString::number(i));
     }
+    m_pProMonthLCWidget = new CLabelComboxWidget("月：", qstrlistMonth, this);
     // 流水号
-    m_pProSerialNumLabel = new QLabel("流水号：", this);
-    m_pProSerialNumCBox = new QComboBox(this);
+    QStringList qstrlistSerialNum;
     for(int i = 1; i < 17; i++)
     {
-        m_pProSerialNumCBox->insertItem(i, QString::number(i));
+        qstrlistSerialNum.append(QString::number(i));
     }
+    m_pProSerialNumLCWidget = new CLabelComboxWidget("流水号：", qstrlistSerialNum, this);
     // 批号前缀
-    m_pBatchPreNumLabel = new QLabel("批号前缀：", this);
-    m_pBatchPreNumLineEdit = new QLineEdit(this);
-    //m_pBatchPreNumLineEdit->setMaximumWidth(30);
+    m_pBatchPreNumLLWidget = new CLabelLineEditWidget("批号前缀：", "", this);
     // 产品批号
-    m_pProBatchLabel = new QLabel("产品批号：", this);
-    m_pProBatchLineEdit = new QLineEdit(this);
-    //m_pProBatchLineEdit->setMaximumWidth(30);
+    m_pProBatchLLWidget = new CLabelLineEditWidget("产品批号：", "", this);
     // 条码号
-    m_pBarcodeNumLabel = new QLabel("条码号：", this);
-    m_pBarcodeNumLineEdit = new QLineEdit(this);
-    //m_pBarcodeNumLineEdit->setMaximumWidth(30);
+    m_pBarcodeNumLLWidget = new CLabelLineEditWidget("条码号：", "", this);
 }
 
 void CProjectInfoWidget::initLayout()
 {
     QHBoxLayout *pLayout = new QHBoxLayout;
     // 产品代码
-    pLayout->addWidget(m_pProCodeLabel);
-    pLayout->addWidget(m_pProCodeCBox);
+    pLayout->addWidget(m_pProCodeLCWidget);
     // 年
-    pLayout->addWidget(m_pProYearLabel);
-    pLayout->addWidget(m_pProYearCBox);
+    pLayout->addWidget(m_pProYearLCWidget);
     // 月
-    pLayout->addWidget(m_pProMonthLabel);
-    pLayout->addWidget(m_pProMonthCBox);
+    pLayout->addWidget(m_pProMonthLCWidget);
     // 流水号
-    pLayout->addWidget(m_pProSerialNumLabel);
-    pLayout->addWidget(m_pProSerialNumCBox);
+    pLayout->addWidget(m_pProSerialNumLCWidget);
     //
     pLayout->addStretch(100);
     // 批号前缀
-    pLayout->addWidget(m_pBatchPreNumLabel);
-    pLayout->addWidget(m_pBatchPreNumLineEdit);
+    pLayout->addWidget(m_pBatchPreNumLLWidget);
     // 产品批号
-    pLayout->addWidget(m_pProBatchLabel);
-    pLayout->addWidget(m_pProBatchLineEdit);
+    pLayout->addWidget(m_pProBatchLLWidget);
     // 条码号
-    pLayout->addWidget(m_pBarcodeNumLabel);
-    pLayout->addWidget(m_pBarcodeNumLineEdit);
-
+    pLayout->addWidget(m_pBarcodeNumLLWidget);
 
     this->setLayout(pLayout);
 }

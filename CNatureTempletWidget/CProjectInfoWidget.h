@@ -6,6 +6,8 @@
 #include <QSpinBox>
 #include <QComboBox>
 #include <QLineEdit>
+#include "CGeneralWidget/CLabelComboxWidget.h"
+#include "CGeneralWidget/CLabelLineEditWidget.h"
 class CProjectInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -20,22 +22,14 @@ private:
     void initWidget();
     void initLayout();
 private:
-    QLabel *m_pProCodeLabel;
-    QComboBox *m_pProCodeCBox;// 产品代码
-    QLabel *m_pProYearLabel;// 年
-    QComboBox *m_pProYearCBox;
-    QLabel *m_pProMonthLabel;// 月
-    QComboBox *m_pProMonthCBox;
-    QLabel *m_pProSerialNumLabel;// 流水号
-    QComboBox *m_pProSerialNumCBox;
+    CLabelComboxWidget *m_pProCodeLCWidget;// 产品代码
+    CLabelComboxWidget *m_pProYearLCWidget;// 年
+    CLabelComboxWidget *m_pProMonthLCWidget;// 月
+    CLabelComboxWidget *m_pProSerialNumLCWidget;// 流水号
     //
-    QLabel *m_pBatchPreNumLabel;// 批号前缀
-    QLineEdit *m_pBatchPreNumLineEdit;
-    QLabel *m_pProBatchLabel;// 产品批号
-    QLineEdit *m_pProBatchLineEdit;
-    QLabel *m_pBarcodeNumLabel;// 条码号
-    QLineEdit *m_pBarcodeNumLineEdit;
-
+    CLabelLineEditWidget *m_pBatchPreNumLLWidget;// 批号前缀
+    CLabelLineEditWidget *m_pProBatchLLWidget;// 产品批号
+    CLabelLineEditWidget *m_pBarcodeNumLLWidget;// 条码号
 };
 
 #endif // CPRODECTINFOWIDGET_H

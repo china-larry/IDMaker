@@ -2,8 +2,9 @@
 #define COneProWidget_H
 
 #include <QWidget>
-#include <CNatureTempletWidget//CProjectInfoWidget.h>
-#include <CNatureTempletWidget/CNaturePeakWidget.h>
+#include "CNatureTempletWidget//CProjectInfoWidget.h"
+#include "CNatureTempletWidget/CNaturePeakWidget.h"
+#include "CNatureTempletWidget/CBasisDataWidget.h"
 class COneProWidget : public QWidget
 {
     Q_OBJECT
@@ -15,8 +16,9 @@ signals:
 public slots:
 
 private:
-    CProjectInfoWidget *m_pProjectInfoWidget;
-    CNaturePeakWidget *m_pNaturePeakWidget;
+    CProjectInfoWidget *m_pProjectInfoWidget;// 产品信息
+    CNaturePeakWidget *m_pNaturePeakWidget;// 峰值数据
+    CBasisDataWidget *m_pBasisDataWidget;// 基础数据
 };
 
 #endif // COneProWidget_H

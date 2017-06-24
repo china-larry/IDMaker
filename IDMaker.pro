@@ -32,7 +32,9 @@ SOURCES += main.cpp\
     CNatureTempletWidget/CNaturePeakWidget.cpp \
     MoreProjectWidget/CMoreProjectWidget.cpp \
     NatureProjectWidget/CNatureProjectWidget.cpp \
-    CNatureTempletWidget/CBasisDataWidget.cpp
+    CNatureTempletWidget/CBasisDataWidget.cpp \
+    CGeneralWidget/CLabelLineEditWidget.cpp \
+    CGeneralWidget/CLabelComboxWidget.cpp
 
 HEADERS  += mainwindow.h \
     CNatureTempletWidget/CProjectInfoWidget.h \
@@ -42,6 +44,8 @@ HEADERS  += mainwindow.h \
     CNatureTempletWidget/CNaturePeakWidget.h \
     MoreProjectWidget/CMoreProjectWidget.h \
     NatureProjectWidget/CNatureProjectWidget.h \
-    CNatureTempletWidget/CBasisDataWidget.h
+    CNatureTempletWidget/CBasisDataWidget.h \
+    CGeneralWidget/CLabelLineEditWidget.h \
+    CGeneralWidget/CLabelComboxWidget.h
 
 FORMS    += mainwindow.ui
