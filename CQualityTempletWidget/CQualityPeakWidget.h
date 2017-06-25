@@ -1,6 +1,6 @@
 #ifndef CQUALITYPEAKWIDGET_H
 #define CQUALITYPEAKWIDGET_H
-
+// 定量widget模板，指用2和3的公用模板
 #include <QWidget>
 
 class CQualityPeakWidget : public QWidget

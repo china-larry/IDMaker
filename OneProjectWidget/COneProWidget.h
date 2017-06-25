@@ -5,6 +5,9 @@
 #include "CNatureTempletWidget//CProjectInfoWidget.h"
 #include "CNatureTempletWidget/CNaturePeakWidget.h"
 #include "CNatureTempletWidget/CBasisDataWidget.h"
+#include "CNatureTempletWidget/CFC2PeakWidget.h"
+#include "CNatureTempletWidget/CFC2SectionWidget.h"
+#include "CNatureTempletWidget/CFCPlusPeakWidget.h"
 class COneProWidget : public QWidget
 {
     Q_OBJECT
@@ -19,6 +22,9 @@ private:
     CProjectInfoWidget *m_pProjectInfoWidget;// 产品信息
     CNaturePeakWidget *m_pNaturePeakWidget;// 峰值数据
     CBasisDataWidget *m_pBasisDataWidget;// 基础数据
+    CFC2PeakWidget *m_pFC2PeakWidget;// 飞测2临界值
+    CFC2SectionWidget *m_pFC2SectionWidget;// 飞测2分段设置
+    CFCPlusPeakWidget *m_pFCPlusPeakWidget;// 飞测plus定标
 };
 
 #endif // COneProWidget_H

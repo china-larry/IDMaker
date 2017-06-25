@@ -1,6 +1,6 @@
 #ifndef CNATUREPEAKWIDGET_H
 #define CNATUREPEAKWIDGET_H
-
+// 峰值名称
 #include <QWidget>
 #include <QComboBox>
 #include <QLineEdit>

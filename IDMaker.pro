@@ -34,7 +34,11 @@ SOURCES += main.cpp\
     NatureProjectWidget/CNatureProjectWidget.cpp \
     CNatureTempletWidget/CBasisDataWidget.cpp \
     CGeneralWidget/CLabelLineEditWidget.cpp \
-    CGeneralWidget/CLabelComboxWidget.cpp
+    CGeneralWidget/CLabelComboxWidget.cpp \
+    CNatureTempletWidget/CFC2PeakWidget.cpp \
+    CNatureTempletWidget/CFC2SectionWidget.cpp \
+    CNatureTempletWidget/CFCPlusPeakWidget.cpp \
+    CNatureTempletWidget/CFC2TableWidget.cpp
 
 HEADERS  += mainwindow.h \
     CNatureTempletWidget/CProjectInfoWidget.h \
@@ -46,6 +50,10 @@ HEADERS  += mainwindow.h \
     NatureProjectWidget/CNatureProjectWidget.h \
     CNatureTempletWidget/CBasisDataWidget.h \
     CGeneralWidget/CLabelLineEditWidget.h \
-    CGeneralWidget/CLabelComboxWidget.h
+    CGeneralWidget/CLabelComboxWidget.h \
+    CNatureTempletWidget/CFC2PeakWidget.h \
+    CNatureTempletWidget/CFC2SectionWidget.h \
+    CNatureTempletWidget/CFCPlusPeakWidget.h \
+    CNatureTempletWidget/CFC2TableWidget.h
 
 FORMS    += mainwindow.ui

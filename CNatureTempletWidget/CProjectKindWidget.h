@@ -1,6 +1,6 @@
 #ifndef CPROJECTKINDWIDGET_H
 #define CPROJECTKINDWIDGET_H
-
+// 项目总数
 #include <QWidget>
 #include <QRadioButton>
 #include <QLayout>

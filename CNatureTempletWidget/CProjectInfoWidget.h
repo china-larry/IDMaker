@@ -1,6 +1,6 @@
 #ifndef CPRODECTINFOWIDGET_H
 #define CPRODECTINFOWIDGET_H
-
+// 产品代码
 #include <QWidget>
 #include <QLabel>
 #include <QSpinBox>
