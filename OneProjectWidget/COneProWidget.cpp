@@ -9,6 +9,7 @@ COneProWidget::COneProWidget(QWidget *parent) : QWidget(parent)
     m_pFC2PeakWidget = new CFC2PeakWidget(this);
     m_pFC2SectionWidget = new CFC2SectionWidget(this);
     m_pFCPlusPeakWidget = new CFCPlusPeakWidget(this);
+    m_pFC2TableWidget = new CFC2TableWidget(this);
     // 头部区域
     QVBoxLayout *pLayout = new  QVBoxLayout;
     pLayout->addWidget(m_pProjectInfoWidget);
@@ -18,9 +19,17 @@ COneProWidget::COneProWidget(QWidget *parent) : QWidget(parent)
     pPeakBasisLayout->addWidget(m_pBasisDataWidget);
     pLayout->addLayout(pPeakBasisLayout);
     // 第三排
-    pLayout->addWidget(m_pFC2PeakWidget);
-    pLayout->addWidget(m_pFC2SectionWidget);
-    pLayout->addWidget(m_pFCPlusPeakWidget);
+    QHBoxLayout *pFCLayout = new QHBoxLayout;
+    // 左侧
+    QVBoxLayout *pFC2Layout = new QVBoxLayout;
+    pFC2Layout->addWidget(m_pFC2PeakWidget);
+    pFC2Layout->addWidget(m_pFC2SectionWidget);
+    pFC2Layout->addWidget(m_pFCPlusPeakWidget);
+    // 中间
+    pFCLayout->addLayout(pFC2Layout);
+    pFCLayout->addWidget(m_pFC2TableWidget);
+    //
+    pLayout->addLayout(pFCLayout);
     //
     this->setLayout(pLayout);
 }

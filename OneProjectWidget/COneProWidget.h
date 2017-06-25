@@ -8,6 +8,7 @@
 #include "CNatureTempletWidget/CFC2PeakWidget.h"
 #include "CNatureTempletWidget/CFC2SectionWidget.h"
 #include "CNatureTempletWidget/CFCPlusPeakWidget.h"
+#include "CNatureTempletWidget/CFC2TableWidget.h"
 class COneProWidget : public QWidget
 {
     Q_OBJECT
@@ -25,6 +26,7 @@ private:
     CFC2PeakWidget *m_pFC2PeakWidget;// 飞测2临界值
     CFC2SectionWidget *m_pFC2SectionWidget;// 飞测2分段设置
     CFCPlusPeakWidget *m_pFCPlusPeakWidget;// 飞测plus定标
+    CFC2TableWidget *m_pFC2TableWidget;// 飞测2表格
 };
 
 #endif // COneProWidget_H
