@@ -8,6 +8,8 @@
 #include <QLabel>
 #include "CNatureTempletWidget//CProjectKindWidget.h"
 #include "OneProjectWidget/COneProWidget.h"
+
+#  define LIBHEXSHARED_EXPORT Q_DECL_EXPORT
 namespace Ui {
 class MainWindow;
 }
